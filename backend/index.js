@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Port = 8000;
 const bcrypt =require('bcrypt');
-const FoodieUser = require('./model/ReactSchema'); // Correct the path if necessary
+const FoodieUser = require('./model/ReactSchema'); 
 
 const app = express();
 
