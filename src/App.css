@@ -1,0 +1,20 @@
+
+
+#box{
+    background-color: aquamarine;
+    height: 3cm;
+    width: 4cm;
+    margin-left: 1cm;
+    border-radius: 50%
+
+}
+
+#truck{
+    position: absolute;
+    top: 1cm;
+    left: 2cm;
+}
+#topic{
+    font-family: 'Kaushan Script';
+
+}
