@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Port = 8000;
 const bcrypt =require('bcrypt');
-const FoodieUser = require('./model/ReactSchema'); 
+const FoodieUser=require('../backend/model/ReactSchema');
 require('dotenv').config();
 
 

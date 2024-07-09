@@ -11,11 +11,14 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [cpassword, setcPassword] = useState('');
   const navigate = useNavigate();
+  // require('dotenv').config();
+
+  // const BASE=env.process.env.BASE;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://foodies-x.onrender.com/signup', {
+      await axios.post(`https://foodies-x.onrender.com/signup`, {
         username: username,
         email: email,
         password: password,

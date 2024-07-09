@@ -58,7 +58,9 @@ import login from '../assets/login.json';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import warn from '../assets/warn.json';
+// require('dotenv').config();
 
+// const BASE=env.process.env.BASE;
 
 const Login = () => {
   const [email, setEmail] = useState('');
