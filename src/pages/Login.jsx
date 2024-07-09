@@ -59,6 +59,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import warn from '../assets/warn.json';
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -70,7 +71,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:8000/login', {
+      await axios.post('https://foodies-x.onrender.com/login', {
         email: email,
         password: password,
       });

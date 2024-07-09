@@ -15,7 +15,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/signup', {
+      await axios.post('https://foodies-x.onrender.com/signup', {
         username: username,
         email: email,
         password: password,
