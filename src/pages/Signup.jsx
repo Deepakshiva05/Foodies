@@ -37,7 +37,7 @@ const Signup = () => {
               <h2 className="mb-3 text-white font-rich font-bold text-3xl">Sign <span className='text-orange-700'>Up</span></h2>
               <form onSubmit={handleSubmit}>
                 <input type="text" onChange={e => setUsername(e.target.value)} className="w-full px-6 py-3 mb-2 border text-black border-slate-600 rounded-lg font-medium h-[1cm]" placeholder="Username" />
-                <input type="text" onChange={e => setEmail(e.target.value)} className="w-full px-6 py-3 mb-2 border text-black border-slate-600 rounded-lg font-medium h-[1cm]" placeholder="Email" />
+                <input type="email" onChange={e => setEmail(e.target.value)} className="w-full px-6 py-3 mb-2 border text-black border-slate-600 rounded-lg font-medium h-[1cm]" placeholder="Email" />
                 <input type="password" onChange={e => setPassword(e.target.value)} className="w-full px-6 py-3 mb-2 text-black border border-slate-600 rounded-lg font-medium h-[1cm]" placeholder="Password" />
                 <input type="password" onChange={e => setcPassword(e.target.value)} className="w-full px-6 py-3 mb-2 text-black border border-slate-600 rounded-lg font-medium h-[1cm]" placeholder="Confirm Password" />
                 <input type="submit" value="SIGN UP" className="text-black bg-orange-500 hover:text-black text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]" />

@@ -34,10 +34,10 @@ const Navbar = () => {
                   <Link to="/contact" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
                 </div>
                 <div className="ml-4">
-                  <button className="bg-orange-700 p-2 font-rich rounded-lg text-white">Login/Signup</button>
+                  <Link to="/login" className="bg-orange-700 p-2 font-rich rounded-lg text-white">Login/Signup</Link>
                 </div>
               </div>
-              <div className="-mr-2 flex md:hidden">
+              <div className="flex md:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   type="button"
@@ -76,9 +76,7 @@ const Navbar = () => {
                 <Link to="/about" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</Link>
                 <Link to="/locations" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Locations</Link>
                 <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
-                <div className="btns">
-                 <Link to='/login' onClick={handleLinkClick} className="bg-orange-700 p-2 font-rich rounded-lg text-white">Login/Signup</Link> 
-                </div>
+                <Link to="/login" onClick={handleLinkClick} className="bg-orange-700 p-2 font-rich rounded-lg text-white block mt-4">Login/Signup</Link>
               </div>
             </div>
           </Transition>
@@ -89,8 +87,8 @@ const Navbar = () => {
           <Route path="/locations" element={<Location />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login/>}></Route>
-          <Route path='/signup' element={<Signup/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
         </Routes>
       </Router>
     </div>
@@ -98,6 +96,7 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
 
 // import React, { useState } from 'react';
 // import { Transition } from '@headlessui/react';
@@ -107,9 +106,15 @@ export default Navbar;
 // import Menu from './Menu';
 // import About from '../pages/About';
 // import Location from '../pages/Location';
+// import Login from '../pages/Login';
+// import Signup from '../pages/Signup';
 
 // const Navbar = () => {
 //   const [isOpen, setIsOpen] = useState(false);
+
+//   const handleLinkClick = () => {
+//     setIsOpen(false);
+//   };
 
 //   return (
 //     <div>
@@ -128,11 +133,8 @@ export default Navbar;
 //                   <Link to="/locations" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Locations</Link>
 //                   <Link to="/contact" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
 //                 </div>
-//                 <div className="ml-4">
-//                   <button className="bg-orange-700 p-2 font-rich rounded-lg text-white">Login/Signup</button>
-//                 </div>
 //               </div>
-//               <div className="-mr-2 flex md:hidden">
+//               <div className="flex md:hidden">
 //                 <button
 //                   onClick={() => setIsOpen(!isOpen)}
 //                   type="button"
@@ -166,14 +168,12 @@ export default Navbar;
 //           >
 //             <div className="md:hidden" id="mobile-menu">
 //               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-//                 <Link to="/" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
-//                 <Link to="/menu" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Menu</Link>
-//                 <Link to="/about" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</Link>
-//                 <Link to="/locations" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Locations</Link>
-//                 <Link to="/contact" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
-//                 <div className="btns">
-//                   <button className="bg-orange-700 p-2 font-rich rounded-lg text-white">Login/Signup</button>
-//                 </div>
+//                 <Link to="/" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
+//                 <Link to="/menu" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Menu</Link>
+//                 <Link to="/about" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</Link>
+//                 <Link to="/locations" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Locations</Link>
+//                 <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+//                 <Link to="/login" onClick={handleLinkClick} className="bg-orange-700 p-2 font-rich rounded-lg text-white block mt-4">Login/Signup</Link>
 //               </div>
 //             </div>
 //           </Transition>
@@ -184,6 +184,8 @@ export default Navbar;
 //           <Route path="/locations" element={<Location />} />
 //           <Route path="/menu" element={<Menu />} />
 //           <Route path="/about" element={<About />} />
+//           <Route path="/login" element={<Login />} />
+//           <Route path='/signup' element={<Signup />} />
 //         </Routes>
 //       </Router>
 //     </div>
@@ -191,4 +193,3 @@ export default Navbar;
 // }
 
 // export default Navbar;
-

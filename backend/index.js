@@ -1,18 +1,19 @@
-
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const Port = 8000;
 const bcrypt =require('bcrypt');
 const FoodieUser = require('./model/ReactSchema'); // Correct the path if necessary
+require('dotenv').config();
+
+const MONGO_URL=process.env.Mongo_url;
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/foodie', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URL)
     .then(() => console.log("DB connected successfully"))
     .catch((error) => console.log(error));
 
