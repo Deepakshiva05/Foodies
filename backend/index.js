@@ -3,10 +3,14 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Port = 8000;
 const bcrypt =require('bcrypt');
+<<<<<<< HEAD
 const FoodieUser = require('./model/ReactSchema'); // Correct the path if necessary
 require('dotenv').config();
 
 const MONGO_URL=process.env.Mongo_url;
+=======
+const FoodieUser = require('./model/ReactSchema'); 
+>>>>>>> 0bf034a771b2a28b0f810c425650213aa83095da
 
 const app = express();
 
