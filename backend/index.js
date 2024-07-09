@@ -7,7 +7,7 @@ const FoodieUser=require('../backend/model/ReactSchema');
 require('dotenv').config();
 
 
-const MONGO_URL=process.env.Mongo_url;
+const MONGO_URL=process.env.MONGO_URL;
 
 
 

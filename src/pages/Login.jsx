@@ -78,7 +78,7 @@ const Login = () => {
         password: password,
       });
       console.log("Login successful");
-      navigate("/home"); // Redirect to dashboard or another page after login
+      navigate("/home"); 
     } catch (error) {
       if (error.response && error.response.status === 400) {
         setErrorMessage(error.response.data);
